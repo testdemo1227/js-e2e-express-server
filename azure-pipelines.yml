@@ -40,7 +40,12 @@ steps:
     testRunner: JUnit
     testResultsFiles: '**/test-results.xml'
 
-- script: |
-    npm install -g @angular/cli
-    npm install
-    ng build --prod
+- task: npmAuthenticate@0
+  inputs:
+    customEndpoint: <Name of npm service connection>
+
+- script: gulp                       # include any additional options that are needed
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/TEST-RESULTS.xml'
+    testRunTitle: 'Test results for JavaScript using gulp'
