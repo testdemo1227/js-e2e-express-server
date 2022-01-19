@@ -23,7 +23,6 @@ steps:
     npx mocha
     npm run build
   displayName: 'npm install and build'
-- script: npm run compile
 - script: tsc --target ES6 --strict true --project tsconfigs/production.json
 - script: mocha test --reporter mocha-junit-reporter
 - script: npm test
