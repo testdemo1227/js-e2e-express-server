@@ -40,7 +40,7 @@ steps:
     testRunner: JUnit
     testResultsFiles: '**/test-results.xml'
 
-- script: gulp                       # include any additional options that are needed
+- script: gulp
 - task: PublishTestResults@2
   inputs:
     testResultsFiles: '**/TEST-RESULTS.xml'
