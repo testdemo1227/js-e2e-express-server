@@ -42,7 +42,7 @@ steps:
 
 - task: npmAuthenticate@0
   inputs:
-    customEndpoint: <Name of npm service connection>
+    customEndpoint: NewEndpoint
 
 - script: gulp                       # include any additional options that are needed
 - task: PublishTestResults@2
