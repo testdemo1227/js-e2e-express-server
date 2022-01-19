@@ -40,10 +40,6 @@ steps:
     testRunner: JUnit
     testResultsFiles: '**/test-results.xml'
 
-- task: npmAuthenticate@0
-  inputs:
-    customEndpoint: NewEndpoint
-
 - script: gulp                       # include any additional options that are needed
 - task: PublishTestResults@2
   inputs:
